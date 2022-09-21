@@ -39,7 +39,7 @@ public class StickController : MonoBehaviour
     }
 
     void ReleaseStick(){
-        GameObject ball = GameObject.Find("Ball Clube");
+        GameObject ball = GameObject.Find("BallCube");
         Rigidbody ballRigidbody = ball.GetComponent<Rigidbody>();
         ballRigidbody.AddForce(new Vector3(-1f, 0f, 0f) * force * 3, ForceMode.Impulse);
     }
