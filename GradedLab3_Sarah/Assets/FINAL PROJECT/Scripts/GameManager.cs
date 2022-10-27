@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
 		if (quit != null)
 		{
 			hero.GetComponent<HeroController>().DisableMovement();
+            //display game over ui here
 		}
 	}
 

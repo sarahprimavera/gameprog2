@@ -8,6 +8,8 @@ TagManager:
   - HardFloor
   - WoodFloor
   - Enemy
+  - fire
+  - plus
   layers:
   - Default
   - TransparentFX

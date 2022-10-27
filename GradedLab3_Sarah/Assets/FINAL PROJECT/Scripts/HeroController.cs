@@ -15,6 +15,10 @@ public class HeroController : MonoBehaviour
     GameObject target;
     bool go = true;
 
+    int health;
+    // public AudioSource audioSource;
+    // public Audioclip audioclip;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -64,6 +68,17 @@ public class HeroController : MonoBehaviour
                     anim.SetBool("Attack", true);
                 }
             }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "fire"){
+            // audioSource.PlayOneShot(audioclip);
+            health--;
+        }
+        if(collision.gameObject.tag == "plus"){
+            health++;
         }
     }
 
